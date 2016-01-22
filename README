@@ -1,0 +1,15 @@
+=== Nutrisia ===
+Requires at least: 4.4.1
+Tested up to: 4.4.1
+License: GPLv3 or later
+License UIR: https://www.gnu.org/licenses/gpl-3.0.txt
+
+Nutrisia is a WordPress plugin to enhance the functionality of
+Java Multi Mandiri websites, specificaly WordPress based websites.
+
+== Description ==
+
+Nutrisia is written and crafted for Java Multi Mandiri websites in mind,
+so I do warn you that it may be will not able to run smoothly on your site.
+But, I try to write this plugin so it can be installed in any general
+WordPress-based sites.

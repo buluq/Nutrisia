@@ -1,0 +1,9 @@
+# Ignoring temporary files
+*~
+*.bak
+*.kate-swp
+*.old
+*.swp
+
+# Ignoring IDE environtment files
+*.kateproject
