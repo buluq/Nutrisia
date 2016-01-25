@@ -1,0 +1,1 @@
+<?php // Kode adalah puisi

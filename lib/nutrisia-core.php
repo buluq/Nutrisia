@@ -89,7 +89,10 @@ class NutrisiaCore {
 	 * @access private
 	 */
 	private function defineBackendHooks() {
-		$backend = new NutrisiaBackend($this->getPluginName(), $this->getPluginVersion());
+		$backend   = new NutrisiaBackend($this->getPluginName(), $this->getPluginVersion());
+		$dashboard = new NutrisiaDashboard($this->getPluginName(), $this->getPluginVersion());
+
+		$this->loader->addAction('admin_menu', $dashboard, 'addPluginMenu');
 	}
 
 	/**
