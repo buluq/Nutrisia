@@ -93,7 +93,7 @@ class NutrisiaBackend {
 	protected function createOptionGroup($option_group, $option_name, $function = '') {
 		register_setting($option_group, $option_name, $function);
 	}
-	
+
 	/**
 	 * Add sub menu page to WordPress Plugins menu.
 	 *
@@ -126,7 +126,7 @@ class NutrisiaBackend {
 	 * @param string $page The menu page on which to display the section.
 	 */
 	protected function createOptionsSection($section_id, $section_title, $function, $page) {
-
+		add_setting_section($section_id, $section_title, $function, $page);
 	}
 }
 

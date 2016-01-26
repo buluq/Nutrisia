@@ -58,6 +58,27 @@ class NutrisiaDashboard extends NutrisiaBackend {
 			[$this, 'createPluginBoard']
 		);
 	}
+
+	/**
+	 * Register settings for plugin option.
+	 *
+	 * @since 0.0.1
+	 */
+	public function registerPluginSettings() {
+		$this->createOptionGroup('nutrisia_settings', 'livehelperscript');
+	}
+
+	/**
+	 * Insert the live chat script into footer.
+	 */
+	public function insertLiveChat() {
+		if (null !== get_option('livehelperscript') || get_option('livehelperscript') !== '') {
+			echo get_option('livehelperscript');
+		}
+		else {
+			echo '<!-- live chat tidak terpasang -->';
+		}
+	}
 }
 
 /* End of file: nutrisia-dashboard.php */
