@@ -124,7 +124,7 @@ class NutrisiaLoader {
 	 */
 	public function run() {
 		foreach ($this->filters as $hook) {
-			addFilter(
+			add_filter(
 				$hook['hook'],
 				array($hook['component'], $hook['callback']),
 				$hook['priority'],
@@ -133,9 +133,9 @@ class NutrisiaLoader {
 		}
 
 		foreach ($this->actions as $hook) {
-			addAction(
+			add_action(
 				$hook['hook'],
-				array( $hook['component'], $hook['callback'] ),
+				array($hook['component'], $hook['callback']),
 				$hook['priority'],
 				$hook['accepted_args']
 			);

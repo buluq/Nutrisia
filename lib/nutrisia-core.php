@@ -89,7 +89,12 @@ class NutrisiaCore {
 	 * @access private
 	 */
 	private function defineBackendHooks() {
-		$backend = new NutrisiaBackend($this->getPluginName(), $this->getPluginVersion());
+		$backend   = new NutrisiaBackend($this->getPluginName(), $this->getPluginVersion());
+		$dashboard = new NutrisiaDashboard($this->getPluginName(), $this->getPluginVersion());
+
+		$this->loader->addAction('admin_init', $dashboard, 'registerPluginSettings');
+		$this->loader->addAction('admin_menu', $dashboard, 'addPluginMenu');
+		$this->loader->addAction('wp_footer', $dashboard, 'insertLiveChat', 100);
 	}
 
 	/**
