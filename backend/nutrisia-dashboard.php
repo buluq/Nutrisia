@@ -66,13 +66,14 @@ class NutrisiaDashboard extends NutrisiaBackend {
 	 */
 	public function registerPluginSettings() {
 		$this->createOptionGroup('nutrisia_settings', 'livehelperscript');
+		$this->createOptionGroup('nutrisia_settings', 'nutrisia_supportsite');
 	}
 
 	/**
 	 * Insert the live chat script into footer.
 	 */
 	public function insertLiveChat() {
-		if (null !== get_option('livehelperscript') || get_option('livehelperscript') !== '') {
+		if (get_option('livehelperscript') !== '') {
 			echo get_option('livehelperscript');
 		}
 		else {
