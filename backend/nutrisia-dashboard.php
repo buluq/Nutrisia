@@ -65,7 +65,19 @@ class NutrisiaDashboard extends NutrisiaBackend {
 	 * @since 0.0.1
 	 */
 	public function registerPluginSettings() {
-		$this->createOptionGroup('nutrisia_settings', 'livehelperscript');
+		$this->createOptionGroup('nutrisia_settings', 'nutrisia_shop_name');
+		$this->createOptionGroup('nutrisia_settings', 'nutrisia_shop_address');
+		$this->createOptionGroup('nutrisia_settings', 'nutrisia_shop_district');
+		$this->createOptionGroup('nutrisia_settings', 'nutrisia_shop_province');
+		$this->createOptionGroup('nutrisia_settings', 'nutrisia_shop_country');
+		$this->createOptionGroup('nutrisia_settings', 'nutrisia_shop_phone');
+		$this->createOptionGroup('nutrisia_settings', 'nutrisia_shop_fax');
+		$this->createOptionGroup('nutrisia_settings', 'nutrisia_shop_email');
+		$this->createOptionGroup('nutrisia_settings', 'nutrisia_sales_name');
+		$this->createOptionGroup('nutrisia_settings', 'nutrisia_sales_phone');
+		$this->createOptionGroup('nutrisia_settings', 'nutrisia_sales_email');
+		$this->createOptionGroup('nutrisia_settings', 'nutrisia_sales_bbm');
+		$this->createOptionGroup('nutrisia_settings', 'nutrisia_livehelperscript');
 		$this->createOptionGroup('nutrisia_settings', 'nutrisia_supportsite');
 	}
 

@@ -64,7 +64,6 @@ class NutrisiaBackend {
 		$this->loadDependecies();
 	}
 
-
 	/**
 	 * Load the required dependecies for the plugin.
 	 *

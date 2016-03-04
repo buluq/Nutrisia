@@ -60,6 +60,24 @@ class NutrisiaFrontend {
 	public function __construct($plugin_name, $plugin_version) {
 		$this->plugin_name    = $plugin_name;
 		$this->plugin_version = $plugin_version;
+
+		$this->loadDependecies();
+	}
+
+	/**
+	 * Load the required dependecies for the plugin.
+	 *
+	 * Include the following files that make up the plugin:
+	 * - nutrisia-loader.php for orchestrating the hooks of the plugin,
+	 *
+	 * @since 0.0.1
+	 * @access private
+	 */
+	private function loadDependecies() {
+		/**
+		 * The class responsible for plugin administration page.
+		 */
+		require_once plugin_dir_path(dirname(__file__)) . 'frontend/widget/nutrisia-shop-contact.php';
 	}
 }
 

@@ -105,6 +105,9 @@ class NutrisiaCore {
 	 */
 	private function defineFrontendHooks() {
 		$frontend = new NutrisiaFrontend($this->getPluginName(), $this->getPluginVersion());
+		$contact  = new NutrisiaShopContact($this->getPluginName(), $this->getPluginVersion());
+
+		$this->loader->addAction('widgets_init', $contact, 'registerWidget');
 	}
 
 	/**
