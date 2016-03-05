@@ -1,4 +1,4 @@
-<?php if (!empty(get_option('nutrisia_shop_address'))): ?>
+<?php if (!empty(get_option('nutrisia_shop_name'))): ?>
 	<p>Untuk pembelian, pemesanan, dan konsultasi produk, silakan hubungi kami</p>
 	<p><strong><?php echo strtoupper(esc_attr(get_option('nutrisia_shop_name'))); ?></strong></p>
 	<address><?php echo esc_attr(get_option('nutrisia_shop_address')); ?><br>
@@ -21,9 +21,9 @@
 	<?php endif; ?>
 </ul>
 
-<?php if (!empty(get_option('nutrisia_sales_phone')) || !empty(get_option('nutrisia_sales_email')) || !empty(get_option('nutrisia_sales_bbm'))): ?>
+<?php if (!empty(get_option('nutrisia_sales_name')) || !empty(get_option('nutrisia_sales_phone')) || !empty(get_option('nutrisia_sales_email')) || !empty(get_option('nutrisia_sales_bbm'))): ?>
 	<hr>
-	<p>Untuk respon cepat, hubungi bagian penjualan kami melalui</p>
+	<p>Untuk respon cepat, hubungi bagian penjualan kami</p>
 
 	<?php if (!empty(get_option('nutrisia_sales_name'))): ?>
 		<p><strong><?php echo ucwords(esc_attr(get_option('nutrisia_sales_name'))); ?></strong></p>

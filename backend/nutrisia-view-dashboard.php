@@ -10,7 +10,11 @@
 		<table class="form-table">
 			<tr>
 				<th scope="row">Nama toko</th>
-				<td><input name="nutrisia_shop_name" class="regular-text" type="text" placeholder="Nama toko atau badan usaha." value="<?php echo esc_attr(get_option('nutrisia_shop_name')); ?>"></td>
+				<td>
+					<p>Agar widget kontak menampilkan alamat yang sudah diisi, nama toko harus diisi terlebih dahulu.</p>
+
+					<p><input name="nutrisia_shop_name" class="regular-text" type="text" placeholder="Nama toko atau badan usaha." value="<?php echo esc_attr(get_option('nutrisia_shop_name')); ?>"></p>
+				</td>
 			</tr>
 
 			<tr>
@@ -46,6 +50,8 @@
 			</tr>
 		</table>
 
+		<hr>
+
 		<h3>Kontak Sales</h3>
 		<table class="form-table">
 			<tr>
@@ -69,6 +75,7 @@
 			</tr>
 		</table>
 
+		<hr>
 
 		<h3>Live Helper Chat</h3>
 		<table class="form-table">
@@ -81,11 +88,14 @@
 				<th scope="row">Skrip live chat</th>
 				<td>
 					<p>Masukan skrip untuk embed widget live chat disini.</p>
+
 					<p><textarea name="nutrisia_livehelperscript" class="large-text code" rows="15"><?php echo esc_attr(get_option('nutrisia_livehelperscript')); ?></textarea></p>
 				</td>
 			</tr>
 		</table>
 
+		<hr>
+		
 		<?php submit_button(); ?>
 	</form>
 </div>
